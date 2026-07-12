@@ -6,7 +6,15 @@ import eventRoutes from "./modules/events/event.route";
 const app: Application = express();
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://eventhubclient-gixw.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/api/admin", adminRoutes);
