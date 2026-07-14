@@ -10,7 +10,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://eventhubclient-gixw.vercel.app",
+      "https://eventhubclient-eosin.vercel.app",
     ],
     credentials: true,
   })
